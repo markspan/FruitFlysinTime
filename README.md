@@ -31,7 +31,7 @@
 
  1.0g: HvR: Get rid of PID control. Change PWM by 1 until at 100 Hz, and extreme changes if bigger temperature changes are requested. Also copied
  all control code to main loop, and disabled timer. Reason for this is that the missing characters in the serial input stream seem to be caused by
- the timing interrupt (i.e., it doesn't happen anymore after the timer was disabled). This does mean that the execution of *all* commands passed
+ the timing interrupt (i.e., it doesn't happen any more after the timer was disabled). This does mean that the execution of *all* commands passed
  over the serial loop should be executed *quickly*, as PWM and boost will not be updated during commands that need long for execution. Therefore removed
  flash and demo. Added p command, which gives a human readable output of current temperatures and PWM values.
 
